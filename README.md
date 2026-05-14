@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | **Proyecto** | Comunidad emocional femenina |
-| **Autoras** | Sheyla · Mariana · Nisrin · Tayla |
+| **Autoras** | Sheyla · Mariana · Nisrin · Thayla |
 | **Fecha** | Mayo 2026 |
 | **Slogan** | *Un refugio de escucha y conexión* |
 
@@ -83,6 +83,8 @@ Nuestro público objetivo son mujeres de entre 20 y 40 años: sensibles, introsp
 
 #### Caracterización de nuestra usuaria: María
 ![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/Caracterizaci%C3%B3n%20Persona.png)
+
+Diseño de Persona usando characterAI: https://character.ai/chat/gG1pSbLPRPd7Vb307G_DT5gbWvES05atcnXt3NlRQjY
 
 ### Metodología de los 6 Sombreros de De Bono
 
