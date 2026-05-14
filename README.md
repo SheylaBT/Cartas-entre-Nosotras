@@ -86,8 +86,7 @@ Nuestro público objetivo son mujeres de entre 20 y 40 años: sensibles, introsp
 
 Diseño de Persona usando characterAI: https://character.ai/chat/gG1pSbLPRPd7Vb307G_DT5gbWvES05atcnXt3NlRQjY
 
-### Metodología de los 6 Sombreros de De Bono
-
+### Metodología de los 6 Sombreros
 Aplicamos esta herramienta de Design Thinking para explorar el proyecto desde múltiples perspectivas y tomar decisiones más completas y equilibradas.
 
 
