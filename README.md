@@ -15,7 +15,7 @@
 
 ## Resumen
 
-*Cartas entre Nosotras* es una comunidad emocional femenina basada en el intercambio de cartas anónimas entre mujeres. Nace como respuesta al ruido digital y la superficialidad de las redes sociales, ofreciendo un espacio íntimo, seguro y emocionalmente cálido donde las mujeres pueden expresarse libremente, sentirse comprendidas y acompañar a otras.
+*Cartas entre Nosotras* es una comunidad para mujeres basada en el intercambio de cartas anónimas entre ellas. Nace como respuesta al ruido digital y la superficialidad de las redes sociales, ofreciendo un espacio íntimo, seguro y emocionalmente cálido donde las mujeres pueden expresarse libremente, sentirse comprendidas y acompañar a otras.
 
 El valor no se encuentra únicamente en las cartas, sino en la experiencia emocional completa: la sensación de pertenencia, el sistema de conexión entre mujeres, la escucha genuina y la escritura como puente humano.
 
@@ -65,7 +65,7 @@ Identificando las cualidades y aficiones de cada integrante del equipo — el am
 ### Necesidad / Oportunidad
 
 **El problema**
-Las mujeres están hiperconectadas digitalmente pero emocionalmente desconectadas. Hablan online constantemente, pero pocas veces sienten que alguien realmente las escucha.
+Las mujeres están **hiperconectadas** digitalmente pero emocionalmente desconectadas. Hablan online constantemente, pero pocas veces sienten que alguien realmente las escucha.
 
 **La oportunidad**
 Devolver humanidad, calma y conexión genuina a través de algo simple: escribir y ser leída por otra mujer que te escucha sin juicio.
@@ -109,7 +109,7 @@ Documento visual que recoge la paleta de colores, tipografías, texturas e inspi
 
 Diseño de piezas publicitarias y materiales de comunicación visual para la comunidad, desarrollados en Figma.
 
-![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/landing_page_cartas.html)
+- (file:///C:/Users/LENOVO/Downloads/landing_page_cartas.html#sobre)
 
 ---
 
@@ -117,7 +117,7 @@ Diseño de piezas publicitarias y materiales de comunicación visual para la com
 
 Banner o post con los 10 puntos del manifiesto de *Cartas entre Nosotras*: un texto que invite, conecte y refleje los valores de la comunidad. Será la pieza de presentación de la comunidad.
 
-PENDIENTE
+- (file:///C:/Users/LENOVO/Downloads/manifesto_infografico.html)
 
 ---//////////////////////////////////////////////////////////////////////////////////////
 
@@ -158,7 +158,3 @@ Plataforma de comunidad privada donde las mujeres podrán conectarse, intercambi
 * Propuestas de mejora (por qué consideras que merece la pena continuar)
 * Posible interés del proyecto (¿ Quien podría  colaborar / involucrarse en el proyecto? ¿viable?)
 
-
-
-
-Granada, Mayo 2026
