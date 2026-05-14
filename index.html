@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartas entre Nosotras — Informe del Proyecto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #8b3a3a;
+      --primary-light: #d4a5a5;
+      --secondary: #98c1b8;
+      --green-sage: #6a8f86;
+      --cream: #faf8f5;
+      --cream-deep: #f4efe8;
+      --sand: #e8e0d4;
+      --blush: #e8c8d4;
+      --dark: #2e2622;
+      --mid: #6b5c52;
+      --light-text: #9e8e84;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lora', serif;
+      background-color: var(--cream);
+      color: var(--dark);
+      line-height: 1.9;
+    }
+
+    /* ── ORNAMENTAL LINE ── */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      color: var(--primary-light);
+    }
+    .ornament::before,
+    .ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+    }
+    .ornament span { font-size: 1rem; white-space: nowrap; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 248, 245, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--sand);
+      padding: 0.85rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand {
+      font-family: 'Bodoni Moda', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--mid);
+      transition: color 0.2s;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(180deg, var(--cream-deep) 0%, var(--cream) 100%);
+      text-align: center;
+      padding: 6rem 2rem 5rem;
+      border-bottom: 1px solid var(--sand);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary-light), var(--secondary), var(--primary-light), transparent);
+    }
+    .hero-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green-sage);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--primary);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .hero-slogan {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--mid);
+      margin-bottom: 0.6rem;
+    }
+    .hero-hashtag {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--green-sage);
+      letter-spacing: 1px;
+    }
+    .hero-meta {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      text-align: center;
+    }
+    .hero-meta-item .label {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--light-text);
+      font-family: 'Cormorant Garamond', serif;
+      display: block;
+    }
+    .hero-meta-item .value {
+      font-size: 0.95rem;
+      color: var(--dark);
+    }
+
+    /* ── LOGO PLACEHOLDER ── */
+    .logo-area {
+      margin: 2.5rem auto;
+      max-width: 420px;
+    }
+    .logo-img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .placeholder-img {
+      width: 100%;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--blush) 0%, var(--cream-deep) 100%);
+      border: 1.5px dashed var(--primary-light);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--primary);
+    }
+    .placeholder-img .icon { font-size: 2.5rem; }
+    .placeholder-img p { font-size: 0.82rem; color: var(--mid); font-style: italic; }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+    section + section {
+      border-top: 1px solid var(--sand);
+    }
+
+    .section-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.78rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green-sage);
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+    h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 2rem 0 0.75rem;
+    }
+    h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 1px;
+      color: var(--green-sage);
+      margin: 1.5rem 0 0.5rem;
+    }
+    p { margin-bottom: 1rem; color: var(--mid); }
+
+    /* ── QUOTE / MANIFIESTO ── */
+    blockquote {
+      border-left: 3px solid var(--primary-light);
+      padding: 1.2rem 1.8rem;
+      margin: 2rem 0;
+      background: var(--cream-deep);
+      border-radius: 0 6px 6px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── CARDS ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .card {
+      background: var(--cream-deep);
+      border: 1px solid var(--sand);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+    }
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .card h4 {
+      font-size: 0.9rem;
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 0 0 0.4rem;
+      letter-spacing: 0;
+    }
+    .card p {
+      font-size: 0.88rem;
+      color: var(--mid);
+      margin: 0;
+    }
+
+    /* ── PERSONA CARD ── */
+    .persona-card {
+      background: linear-gradient(135deg, var(--blush) 0%, var(--cream-deep) 100%);
+      border: 1px solid var(--primary-light);
+      border-radius: 12px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2rem;
+      align-items: start;
+      margin: 1.5rem 0;
+    }
+    .persona-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--blush));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      border: 3px solid white;
+    }
+    .persona-name {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+    .persona-desc { font-size: 0.88rem; color: var(--mid); }
+    .persona-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+    .trait {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid var(--primary-light);
+      border-radius: 20px;
+      padding: 0.25rem 0.85rem;
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+    }
+    .persona-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--dark);
+      border-left: 2px solid var(--primary-light);
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* ── SOMBRERO CARDS ── */
+    .sombrero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .sombrero-card {
+      border-radius: 10px;
+      padding: 1.2rem;
+      border: 1px solid transparent;
+    }
+    .sombrero-card h4 {
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin: 0.4rem 0 0.3rem;
+      letter-spacing: 0;
+      color: inherit;
+    }
+    .sombrero-card p {
+      font-size: 0.82rem;
+      margin: 0;
+    }
+    .s-white  { background: #faf9f7; border-color: #d4cec4; color: #4a3f38; }
+    .s-white p  { color: #6b5c52; }
+    .s-red    { background: #faeae8; border-color: #e8b5af; color: #7a2f28; }
+    .s-red p    { color: #7a2f28; }
+    .s-black  { background: #eeeae6; border-color: #b0a89c; color: #2e2622; }
+    .s-black p  { color: #4a3f38; }
+    .s-yellow { background: #fdf5e0; border-color: #e8d4a0; color: #7a5c10; }
+    .s-yellow p { color: #7a5c10; }
+    .s-green  { background: #eaf3ee; border-color: #a8d4b8; color: #2a6040; }
+    .s-green p  { color: #2a6040; }
+    .s-blue   { background: #e8f0f8; border-color: #a8c0d8; color: #2a4870; }
+    .s-blue p   { color: #2a4870; }
+
+    /* ── METODOLOGÍA TIMELINE ── */
+    .timeline {
+      margin: 1.5rem 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 0; bottom: 0;
+      width: 1.5px;
+      background: linear-gradient(180deg, var(--primary-light), var(--secondary));
+    }
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+    .timeline-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 2px solid var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .timeline-content h4 {
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin: 0.4rem 0 0.3rem;
+      letter-spacing: 0;
+    }
+    .timeline-content p { font-size: 0.88rem; margin: 0; }
+
+    /* ── PRODUCTOS ── */
+    .product-card {
+      background: var(--cream-deep);
+      border: 1px solid var(--sand);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .product-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+    .product-card h4 {
+      font-family: 'Lora', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--dark);
+      margin: 0 0 0.3rem;
+      letter-spacing: 0;
+    }
+    .product-card p { font-size: 0.88rem; margin: 0 0 0.5rem; }
+    .product-link {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--green-sage);
+      text-decoration: none;
+      border-bottom: 1px solid var(--secondary);
+      padding-bottom: 1px;
+      transition: color 0.2s;
+    }
+    .product-link:hover { color: var(--primary); }
+    .badge-pending {
+      display: inline-block;
+      background: var(--sand);
+      color: var(--mid);
+      font-size: 0.72rem;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+    }
+    .badge-done {
+      display: inline-block;
+      background: #eaf3ee;
+      color: #2a6040;
+      font-size: 0.72rem;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+    }
+
+    /* ── IMAGE PLACEHOLDER ── */
+    .img-placeholder {
+      width: 100%;
+      padding: 2.5rem 1.5rem;
+      background: linear-gradient(135deg, var(--blush) 0%, var(--cream-deep) 100%);
+      border: 1.5px dashed var(--primary-light);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .img-placeholder .big-icon { font-size: 2.5rem; }
+    .img-placeholder strong {
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      color: var(--primary);
+    }
+    .img-placeholder span {
+      font-size: 0.8rem;
+      color: var(--light-text);
+      font-style: italic;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--cream-deep);
+      border-top: 1px solid var(--sand);
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    footer .footer-brand {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+    footer p { font-size: 0.85rem; color: var(--light-text); margin: 0; }
+    footer .footer-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+      margin: 1.2rem auto;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .hero { padding: 4rem 1.2rem 3rem; }
+      section { padding: 3rem 1.2rem; }
+      .persona-card { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+  <span class="nav-brand">Cartas entre Nosotras</span>
+  <ul class="nav-links">
+    <li><a href="#presentacion">Presentación</a></li>
+    <li><a href="#quienes">Quiénes somos</a></li>
+    <li><a href="#metodologia">Metodología</a></li>
+    <li><a href="#etapa1">Etapa 1</a></li>
+    <li><a href="#etapa2">Etapa 2</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO / PRESENTACIÓN ── -->
+<section id="presentacion" style="padding-top: 0; max-width: 100%;">
+  <div class="hero">
+    <p class="hero-eyebrow">Informe del Proyecto · Comunidad Emocional Femenina</p>
+
+    <!-- 🖼️ LOGOTIPO — Reemplaza el src con la ruta real del logo en tu repositorio -->
+    <div class="logo-area">
+      <img
+        src="Logo_Cartas_entre_nosotras.png"
+        alt="Logotipo Cartas entre Nosotras"
+        class="logo-img"
+        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex';"
+      />
+      <div class="placeholder-img" id="logo-fallback" style="display:none;">
+        <div class="icon">✉️</div>
+        <strong>Logotipo</strong>
+        <p>Coloca el archivo <code>Logo_Cartas_entre_nosotras.png</code> en la raíz del repositorio</p>
+      </div>
+    </div>
+
+    <h1>Cartas entre Nosotras</h1>
+    <p class="hero-slogan">"Aquí puedo ser yo sin aparentar."</p>
+    <p class="hero-hashtag">#CartasEntreNosotras · #UnRefugioDeEscuchaYConexión</p>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">Proyecto</span>
+        <span class="value">Comunidad emocional femenina</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Autoras</span>
+        <span class="value">____________ · ____________ · ____________</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Fecha</span>
+        <span class="value">Mayo 2025</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUMEN -->
+  <div style="max-width: 860px; margin: 0 auto; padding: 3rem 2rem 0;">
+    <p class="section-label">Resumen</p>
+    <h2>¿De qué trata este proyecto?</h2>
+    <p>
+      <em>Cartas entre Nosotras</em> es una comunidad emocional femenina basada en el intercambio de cartas anónimas o semianónimas entre mujeres. Nace como respuesta al ruido digital y la superficialidad de las redes sociales, ofreciendo un espacio íntimo, seguro y emocionalmente cálido donde las mujeres pueden expresarse libremente, sentirse comprendidas y acompañar a otras.
+    </p>
+    <p>
+      El valor no reside únicamente en las cartas, sino en la experiencia emocional completa: la sensación de pertenencia, el sistema de conexión entre mujeres, la escucha genuina y la escritura como puente humano.
+    </p>
+    <blockquote>
+      "Cartas entre Nosotras transforma la escritura en un puente emocional entre mujeres."
+    </blockquote>
+    <div class="ornament"><span>✦</span></div>
+  </div>
+</section>
+
+<!-- ── QUIÉNES SOMOS ── -->
+<section id="quienes">
+  <p class="section-label">La comunidad</p>
+  <h2>¿Quiénes somos?</h2>
+  <p>
+    Somos tres mujeres con perfiles analíticos, organizados y orientados a procesos. Nos apasiona escribir, bailar, escuchar música y crear experiencias humanas con propósito. Aunque no nos consideramos expertas en contenido creativo para redes sociales, nuestra fortaleza está en estructurar experiencias emocionales auténticas y construir comunidad desde la empatía y la organización.
+  </p>
+
+  <h3>Misión</h3>
+  <p>
+    Ayudar a las mujeres a reconectar consigo mismas y con otras mujeres mediante espacios seguros de expresión, escucha y acompañamiento a través de la escritura.
+  </p>
+
+  <!-- MANIFIESTO -->
+  <h3>Manifiesto de la comunidad</h3>
+  <blockquote>
+    <!-- 📝 REEMPLAZA con el manifiesto real una vez esté creado -->
+    Aquí irá el manifiesto oficial de <em>Cartas entre Nosotras</em>: un texto que invite, conecte y refleje los valores de la comunidad.<br><br>
+    <em>📌 Pendiente de redacción. El manifiesto será un banner/post con 10 puntos que atraigan y conecten a las mujeres con la comunidad.</em>
+  </blockquote>
+
+  <!-- 🔗 LINK DEL MANIFIESTO — Reemplaza el # con el link real cuando esté listo -->
+  <a href="#" class="product-link" style="margin-top: 0.5rem; display: inline-block;">
+    → Ver manifiesto publicado (próximamente)
+  </a>
+
+  <h4>Visión</h4>
+  <p>
+    Ser el refugio digital de referencia para mujeres que buscan conexión auténtica: un espacio donde la escritura crea comunidad y donde cada carta es un acto de valentía, empatía y sororidad.
+  </p>
+
+  <div class="ornament"><span>✦</span></div>
+</section>
+
+<!-- ── METODOLOGÍA ── -->
+<section id="metodologia">
+  <p class="section-label">Marco de trabajo</p>
+  <h2>Metodología</h2>
+  <p>
+    Se empleó <strong>Design Thinking</strong> como metodología central para diseñar una comunidad centrada en las personas. Este enfoque permitió explorar con empatía las necesidades emocionales del público objetivo antes de prototipar soluciones. Complementariamente, se reflexionó sobre el rol de la mujer en la sociedad contemporánea como punto de partida para identificar oportunidades de conexión auténtica.
+  </p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot">🔍</div>
+      <div class="timeline-content">
+        <h4>Empatizar</h4>
+        <p>Comprender las emociones, necesidades y frustraciones de las mujeres en el entorno digital actual.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">💡</div>
+      <div class="timeline-content">
+        <h4>Definir</h4>
+        <p>Identificar el problema central: la desconexión emocional pese a la hiperconectividad digital.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">✨</div>
+      <div class="timeline-content">
+        <h4>Idear</h4>
+        <p>Lluvia de ideas con base en los hobbies, contexto personal e intereses de cada integrante del equipo.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">🛠</div>
+      <div class="timeline-content">
+        <h4>Prototipar</h4>
+        <p>Desarrollo del moodboard, logotipo, identidad visual, personaje usuario y primeros productos digitales.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot">🌱</div>
+      <div class="timeline-content">
+        <h4>Evaluar</h4>
+        <p>Iteración continua sobre los productos y la experiencia de la comunidad.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ornament"><span>✦</span></div>
+</section>
+
+<!-- ── ETAPA 1: IDEACIÓN ── -->
+<section id="etapa1">
+  <p class="section-label">Etapa 1</p>
+  <h2>Ideación del proyecto</h2>
+
+  <h3>¿Cómo surge el proyecto?</h3>
+  <p>
+    Identificando las cualidades y aficiones (hobbies) de cada integrante del equipo — el amor por la escritura, la música, el baile y la creación de experiencias —, así como el contexto compartido de ser mujeres en un entorno internacional, se realizó una lluvia de ideas para construir una comunidad con sentido real: una que ayude a lograr una conexión auténtica entre mujeres.
+  </p>
+
+  <h3>Necesidad / Oportunidad</h3>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h4>El problema</h4>
+      <p>Las mujeres están hiperconectadas digitalmente pero emocionalmente desconectadas. Hablan online constantemente, pero pocas veces sienten que alguien realmente las escucha.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">✉️</div>
+      <h4>La oportunidad</h4>
+      <p>Devolver humanidad, calma y conexión genuina a través de algo simple: escribir y ser leída por otra mujer que te escucha sin juicio.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌿</div>
+      <h4>El espacio</h4>
+      <p>Un refugio emocional dentro del ruido digital: íntimo, seguro, cálido y auténtico, sin la presión de las redes sociales tradicionales.</p>
+    </div>
+  </div>
+
+  <h3>Motivación de la propuesta</h3>
+  <p>
+    Consideramos este proyecto interesante porque responde a una necesidad emocional real y universal entre mujeres: la necesidad de ser escuchadas de verdad. La escritura tiene un poder transformador que las redes sociales han ignorado. Recuperar ese espacio íntimo — con anonimato, empatía y sin juicio — crea valor humano genuino que ningún algoritmo puede reemplazar.
+  </p>
+
+  <h3>Personas / Usuarios</h3>
+  <p>
+    Nuestro público objetivo son mujeres de entre 20 y 40 años: sensibles, introspectivas, emocionalmente saturadas o simplemente en búsqueda de conexiones reales. Mujeres creativas, empáticas, reflexivas, que disfrutan escribir, leer o expresarse emocionalmente.
+  </p>
+
+  <!-- PERSONA: MARÍA -->
+  <div class="persona-card">
+    <div>
+      <div class="persona-avatar">👩</div>
+    </div>
+    <div>
+      <div class="persona-name">María</div>
+      <p class="persona-desc">28 años · Diseñadora freelance · Vive sola en una ciudad nueva</p>
+      <div class="persona-traits">
+        <span class="trait">Introspectiva</span>
+        <span class="trait">Sensible</span>
+        <span class="trait">Le gusta leer</span>
+        <span class="trait">Saturación digital</span>
+        <span class="trait">Busca conexiones reales</span>
+      </div>
+      <p class="persona-quote">"Tengo miles de seguidores pero nadie que realmente me conozca."</p>
+      <!-- 🔗 LINK al personaje de character.ai -->
+      <a href="https://character.ai/chat/gG1pSbLPRPd7Vb307G_DT5gbWvES05atcnXt3NlRQjY" target="_blank" class="product-link" style="margin-top: 0.8rem; display: inline-block;">
+        → Interactuar con el personaje María en Character.AI
+      </a>
+    </div>
+  </div>
+
+  <!-- 🖼️ IMAGEN CARACTERIZACIÓN -->
+  <div class="img-placeholder">
+    <div class="big-icon">🖼️</div>
+    <strong>Imagen de caracterización de María</strong>
+    <span>Inserta aquí la imagen del perfil de usuario con sus características, frases y comportamientos</span>
+    <span><em>Reemplaza este bloque con: <code>&lt;img src="maria_persona.png" alt="Caracterización de María" style="max-width:100%; border-radius:8px;"&gt;</code></em></span>
+  </div>
+
+  <!-- METODOLOGÍA 6 SOMBREROS -->
+  <h3>Metodología de los 6 Sombreros de De Bono</h3>
+  <p>Aplicamos esta herramienta de Design Thinking para explorar el proyecto desde múltiples perspectivas y tomar decisiones más completas y equilibradas.</p>
+
+  <div class="sombrero-grid">
+    <div class="sombrero-card s-white">
+      <div>🎩</div>
+      <h4>Sombrero Blanco · Datos</h4>
+      <p>Mujeres emocionalmente aisladas pese a la hiperconexión. Crecimiento del journaling y comunidades íntimas online.</p>
+    </div>
+    <div class="sombrero-card s-red">
+      <div>🎩</div>
+      <h4>Sombrero Rojo · Emociones</h4>
+      <p>Sentimos que hay una necesidad real. El proyecto nos emociona porque lo vivimos nosotras mismas.</p>
+    </div>
+    <div class="sombrero-card s-black">
+      <div>🎩</div>
+      <h4>Sombrero Negro · Riesgos</h4>
+      <p>Anonimato mal gestionado. Dificultad para escalar. Posible uso inadecuado del espacio.</p>
+    </div>
+    <div class="sombrero-card s-yellow">
+      <div>🎩</div>
+      <h4>Sombrero Amarillo · Valor</h4>
+      <p>Conexión auténtica. Comunidad segura. Diferencial claro frente a redes sociales tradicionales.</p>
+    </div>
+    <div class="sombrero-card s-green">
+      <div>🎩</div>
+      <h4>Sombrero Verde · Ideas</h4>
+      <p>Matching emocional. Prompts semanales. Eventos presenciales de escritura. Dinámicas guiadas.</p>
+    </div>
+    <div class="sombrero-card s-blue">
+      <div>🎩</div>
+      <h4>Sombrero Azul · Proceso</h4>
+      <p>Estructura por etapas, empezando con MVP digital y comunidad piloto antes de escalar.</p>
+    </div>
+  </div>
+
+  <!-- 🖼️ IMAGEN DE LOS 6 SOMBREROS -->
+  <div class="img-placeholder" style="margin-top: 1.5rem;">
+    <div class="big-icon">🖼️</div>
+    <strong>Imagen de la metodología de los 6 Sombreros</strong>
+    <span>Inserta aquí la imagen con el resultado visual del ejercicio de Design Thinking</span>
+    <span><em>Reemplaza con: <code>&lt;img src="6_sombreros.png" alt="Metodología 6 Sombreros" style="max-width:100%; border-radius:8px;"&gt;</code></em></span>
+  </div>
+
+  <div class="ornament"><span>✦</span></div>
+</section>
+
+<!-- ── ETAPA 2: PROTOTIPAR / PRODUCTOS ── -->
+<section id="etapa2">
+  <p class="section-label">Etapa 2</p>
+  <h2>Prototipar / Productos</h2>
+  <p>
+    A continuación se presentan los productos desarrollados y la integración de los diferentes medios y plataformas que conforman la experiencia de <em>Cartas entre Nosotras</em>.
+  </p>
+
+  <!-- MOODBOARD -->
+  <div class="product-card">
+    <div class="product-icon">🎨</div>
+    <div>
+      <h4>Identidad visual — Moodboard</h4>
+      <p>Documento visual que recoge la paleta de colores, tipografías, texturas e inspiraciones estéticas de la marca. Refleja la calidez, intimidad y feminidad moderna de la comunidad.</p>
+      <!-- 🔗 REEMPLAZA el href con el link real del HTML en tu repositorio de GitHub -->
+      <a href="moodboard_cartas_entre_nosotras.html" class="product-link">→ Ver moodboard completo</a>
+      &nbsp;&nbsp;<span class="badge-done">Completado</span>
+
+      <!-- 🖼️ IMAGEN DEL MOODBOARD — Reemplaza con img real si tienes captura -->
+      <div class="img-placeholder" style="margin-top: 1rem;">
+        <div class="big-icon">🖼️</div>
+        <strong>Vista previa del moodboard</strong>
+        <span>Inserta una captura del moodboard o la imagen de identidad visual</span>
+        <span><em>Reemplaza con: <code>&lt;img src="moodboard_preview.png" alt="Moodboard" style="max-width:100%; border-radius:8px;"&gt;</code></em></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLICIDAD / FIGMA -->
+  <div class="product-card">
+    <div class="product-icon">📐</div>
+    <div>
+      <h4>Publicidad y promoción — Figma</h4>
+      <p>Diseño de piezas publicitarias y materiales de comunicación visual para la comunidad, desarrollados en Figma.</p>
+      <!-- 🔗 REEMPLAZA el href con el link real de Figma cuando esté listo -->
+      <a href="#" class="product-link">→ Ver diseños en Figma (próximamente)</a>
+      &nbsp;&nbsp;<span class="badge-pending">En proceso</span>
+    </div>
+  </div>
+
+  <!-- MANIFIESTO / POST -->
+  <div class="product-card">
+    <div class="product-icon">📜</div>
+    <div>
+      <h4>Post del manifiesto</h4>
+      <p>Banner o post con los 10 puntos del manifiesto de <em>Cartas entre Nosotras</em>: un texto que invite, conecte y refleje los valores de la comunidad. Será la pieza de presentación de la comunidad.</p>
+      <!-- 🔗 REEMPLAZA con link real cuando esté creado -->
+      <a href="#" class="product-link">→ Ver manifiesto publicado (próximamente)</a>
+      &nbsp;&nbsp;<span class="badge-pending">Pendiente</span>
+    </div>
+  </div>
+
+  <!-- COMUNIDAD ELGG -->
+  <div class="product-card">
+    <div class="product-icon">🌐</div>
+    <div>
+      <h4>Comunidad digital — Elgg</h4>
+      <p>Plataforma de comunidad privada donde las mujeres podrán conectarse, intercambiar cartas y participar en dinámicas guiadas.</p>
+      <p>
+        <strong>Grado de conclusión:</strong>
+      </p>
+      <!-- BARRA DE PROGRESO -->
+      <div style="background: var(--sand); border-radius: 20px; height: 8px; margin: 0.5rem 0 0.3rem; overflow: hidden;">
+        <div style="background: linear-gradient(90deg, var(--primary-light), var(--green-sage)); height: 100%; width: 40%; border-radius: 20px;"></div>
+      </div>
+      <span style="font-size: 0.78rem; color: var(--light-text); font-style: italic;">En desarrollo · 40% completado</span>
+      &nbsp;&nbsp;<span class="badge-pending">En proceso</span>
+    </div>
+  </div>
+
+  <div class="ornament"><span>✦</span></div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">Cartas entre Nosotras</div>
+  <div class="footer-line"></div>
+  <p>Un refugio de escucha y conexión · Comunidad emocional femenina</p>
+  <p style="margin-top: 0.4rem;">#CartasEntreNosotras</p>
+</footer>
+
+</body>
+</html>
