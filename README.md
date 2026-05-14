@@ -105,11 +105,11 @@ Documento visual que recoge la paleta de colores, tipografías, texturas e inspi
 
 
 
-### 📐 Publicidad y promoción — Figma
+### 📐 Publicidad y promoción / landing page
 
 Diseño de piezas publicitarias y materiales de comunicación visual para la comunidad, desarrollados en Figma.
 
-PENDIENTE
+![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/landing_page_cartas.html)
 
 ---
 
