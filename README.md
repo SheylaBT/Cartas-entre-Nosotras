@@ -24,7 +24,7 @@ El valor no se encuentra únicamente en las cartas, sino en la experiencia emoci
 ---
 
 ## Logotipo
-
+![](
 
 ---
 
