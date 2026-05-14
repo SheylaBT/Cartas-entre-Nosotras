@@ -116,42 +116,95 @@ Diseño de piezas publicitarias y materiales de comunicación visual para la com
 ### 📜 Post del manifiesto
 
 Banner o post con los 10 puntos del manifiesto de *Cartas entre Nosotras*: un texto que invite, conecte y refleje los valores de la comunidad. Será la pieza de presentación de la comunidad.
-
-- (file:///C:/Users/LENOVO/Downloads/manifesto_infografico.html)
-
----//////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-### 🌐 Comunidad digital — Elgg
-
-Plataforma de comunidad privada donde las mujeres podrán conectarse, intercambiar cartas y participar en dinámicas guiadas.
-
-**Grado de conclusión:** En desarrollo · 🔄 **En proceso**
+ Lo podemos ver en el **landing page**
 
 ---
 
 *Cartas entre Nosotras · Un refugio de escucha y conexión*
 *#CartasEntreNosotras*
 
-## Etapa 3: Producción y evaluación
-
-(Estrategia que plantearías para evaluar tu propuesta, medidodes e indicadores de éxito, elige / propone) 
-
-
-
+## Etapa 3: Estrategia
 
 ### Estrategia para diseñar comunidada
+#### 🚀 Estrategia de Lanzamiento
 
+Una estrategia simple, orgánica y auténtica — fiel a la esencia de la marca: lenta, humana, sin prisa.
 
+---
 
-### Preguntas frecuentes
+##### 1️⃣ EMPIEZANDO CON AMIGAS (Semana 1-2)
 
+**Compartir con 10 mujeres cercanas:**
 
+- 📲 Mándar el manifesto y la landing por WhatsApp
+- 💬 Pedir que expresen como se sienten
 
+**📱 Mensaje para enviar:**
+
+> *"Hola [nombre], estoy creando un refugio para mujeres llamado Cartas entre Nosotras. ¿Le echas un vistazo y me dices qué piensas? [link] 💌"*
+
+---
+
+##### 2️⃣ CREANDO INSTAGRAM (Semana 3-4)
+
+**Subir 5 posts antes del lanzamiento:**
+
+| # | Post | Descripción |
+|---|------|-------------|
+| 1 | 📜 **El Manifesto** | Los 10 motivos |
+| 2 | 💌 **"¿Qué es Cartas entre Nosotras?"** | Presentación del proyecto |
+| 3 | ✨ **Una frase poderosa** | Estética y resonancia |
+| 4 | 💬 **Un testimonio** | María o Laura |
+| 5 | 🚀 **"Pronto..."** | Teaser de lanzamiento |
+
+**Configuración de la cuenta:**
+
+- **Usuario:** `@cartasentrenosotras`
+- **Bio:** *"💌 Un refugio donde la escritura se vuelve puente"*
+- **Link en bio:** tu landing page
+
+---
+
+##### 3️⃣ LANZAMIENTO OFICIAL (Semana 5)
+
+**El día del lanzamiento:**
+
+- 🚀 Publicar el post de lanzamiento
+- 🌟  Las 4 hermanas fundadoras lo compartiremos en nuestras stories
+- 📲 Mandar el link a 30-50 mujeres más
+
+**Después del lanzamiento:**
+
+- 📝 2 posts por semana
+- 💬 Responder a TODOS los mensajes
+- 💌 Compartir historias de la comunidad
+
+---
+
+### 💡 Las 3 Reglas de Oro del equipo
+
+> #### 1. Hablar como amiga, no como marca
+> El tono debe sentirse personal, cálido y cercano.
+
+> #### 2. Calidad sobre cantidad
+> Mejor 1 post bueno que 5 vacíos.
+
+> #### 3. Responder con cariño
+> A cada mensaje, con tiempo y atención.
+
+---
+
+## 📅 Resumen del Cronograma
+
+```
+Semana 1-2 → Amigas + feedback
+Semana 3-4 → Instagram + 5 posts
+Semana 5   → LANZAMIENTO
+Después    → 2 posts/semana + comunidad
+```
+
+---
 ## Conclusiones y trabajo futuro
-
 
 * Grado de consecución del proyecto 
 * Problemas identificados  (técnicos / sobre la idea inicial / planificacion… ) 
