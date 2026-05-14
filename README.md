@@ -24,23 +24,17 @@ El valor no se encuentra únicamente en las cartas, sino en la experiencia emoci
 ---
 
 ## Logotipo
-![](
+![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/Logo%20Cartas%20entre%20nosotras.png)
 
 ---
 
 ## ¿Quiénes somos?
 
-Somos tres mujeres con perfiles analíticos, organizados y orientados a procesos. Nos apasiona escribir, bailar, escuchar música y crear experiencias humanas con propósito. Aunque no nos consideramos expertas en contenido creativo para redes sociales, nuestra fortaleza está en estructurar experiencias emocionales auténticas y construir comunidad desde la empatía y la organización.
+Somos cuatro mujeres con perfiles analíticos, organizados y orientados a procesos. Nos apasiona escribir, bailar, escuchar música y crear experiencias humanas con propósito. Aunque no nos consideramos expertas en contenido creativo para redes sociales, nuestra fortaleza está en estructurar experiencias emocionales auténticas y construir comunidad desde la empatía y la organización.
 
 ### Misión
 
 Ayudar a las mujeres a reconectar consigo mismas y con otras mujeres mediante espacios seguros de expresión, escucha y acompañamiento a través de la escritura.
-
-### Manifiesto de la comunidad
-
-> 📌 *Pendiente de redacción. El manifiesto será un banner/post con 10 puntos que atraigan y conecten a las mujeres con la comunidad.*
->
-> 🔗 [Ver manifiesto publicado](#) *(próximamente)*
 
 #### Visión
 
@@ -88,19 +82,7 @@ Consideramos este proyecto interesante porque responde a una necesidad emocional
 Nuestro público objetivo son mujeres de entre 20 y 40 años: sensibles, introspectivas, emocionalmente saturadas o simplemente en búsqueda de conexiones reales. Mujeres creativas, empáticas, reflexivas, que disfrutan escribir, leer o expresarse emocionalmente.
 
 #### Caracterización de nuestra usuaria: María
-
-> 👩 **María** · 28 años · Diseñadora freelance · Vive sola en una ciudad nueva
->
-> *"Tengo miles de seguidores pero nadie que realmente me conozca."*
->
-> **Rasgos:** Introspectiva · Sensible · Le gusta leer · Saturación digital · Busca conexiones reales
-
-<!-- Reemplaza el comentario con la imagen real cuando la tengas -->
-<!-- ![Caracterización de María](maria_persona.png) -->
-
-> 📌 *Inserta aquí la imagen de caracterización de María con sus características, frases y comportamientos.*
-
-🔗 [Interactuar con el personaje María en Character.AI](https://character.ai/chat/gG1pSbLPRPd7Vb307G_DT5gbWvES05atcnXt3NlRQjY)
+![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/Caracterizaci%C3%B3n%20Persona.png)
 
 ### Metodología de los 6 Sombreros de De Bono
 
