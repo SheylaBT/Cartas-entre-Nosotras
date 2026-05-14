@@ -109,7 +109,7 @@ Documento visual que recoge la paleta de colores, tipografías, texturas e inspi
 
 Diseño de piezas publicitarias y materiales de comunicación visual para la comunidad, desarrollados en Figma.
 
-- (file:///C:/Users/LENOVO/Downloads/landing_page_cartas.html#sobre)
+- (https://sheylabt.github.io/Cartas-entre-Nosotras/)
 
 ---
 
