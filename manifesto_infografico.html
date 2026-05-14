@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifesto - Cartas entre Nosotras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&family=Lora:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #d4a5a5;
+            --primary-dark: #b58787;
+            --secondary: #98c1b8;
+            --secondary-dark: #7da89e;
+            --accent: #e8d4c8;
+            --blush: #e8c8d4;
+            --dark: #3d3d3d;
+            --cream: #f9f7f4;
+            --green-sage: #8ba89f;
+            --terra: #c89595;
+            --sand: #e8d8c4;
+            --mint: #b8d4cc;
+            --rose: #e0b8b8;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: linear-gradient(135deg, #ebe4dc 0%, #e8d4c8 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ====== POSTER PRINCIPAL ====== */
+        .poster {
+            background: linear-gradient(135deg, var(--cream) 0%, #faf8f6 50%, var(--accent) 100%);
+            padding: 4rem 3rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(61, 61, 61, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Elementos decorativos de fondo */
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--blush) 0%, transparent 70%);
+            opacity: 0.4;
+            border-radius: 50%;
+        }
+
+        .poster::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, var(--mint) 0%, transparent 70%);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+
+        /* Header */
+        .poster-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .poster-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .poster-logo svg {
+            width: 70px;
+            height: 70px;
+        }
+
+        .poster-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: rgba(212, 165, 165, 0.15);
+            color: var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(212, 165, 165, 0.3);
+        }
+
+        .poster-tag::before,
+        .poster-tag::after {
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: var(--primary);
+            opacity: 0.5;
+        }
+
+        .poster-titulo {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 4rem;
+            font-style: italic;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .poster-titulo .numero {
+            font-size: 5.5rem;
+            color: var(--terra);
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .poster-subtitulo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--dark);
+            font-weight: 300;
+            font-style: italic;
+            max-width: 450px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Grid de motivos */
+        .motivos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .motivo {
+            padding: 1.5rem;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .motivo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(61, 61, 61, 0.1);
+        }
+
+        /* Variaciones de color */
+        .motivo-1 {
+            background: linear-gradient(135deg, var(--rose) 0%, var(--primary) 100%);
+            color: white;
+        }
+        .motivo-2 {
+            background: linear-gradient(135deg, var(--mint) 0%, var(--secondary) 100%);
+            color: white;
+        }
+        .motivo-3 {
+            background: linear-gradient(135deg, var(--sand) 0%, var(--accent) 100%);
+            color: var(--dark);
+        }
+        .motivo-4 {
+            background: linear-gradient(135deg, var(--blush) 0%, #d4a5b5 100%);
+            color: white;
+        }
+        .motivo-5 {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--green-sage) 100%);
+            color: white;
+        }
+        .motivo-6 {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--terra) 100%);
+            color: white;
+        }
+        .motivo-7 {
+            background: linear-gradient(135deg, var(--accent) 0%, #d8c0b0 100%);
+            color: var(--dark);
+        }
+        .motivo-8 {
+            background: linear-gradient(135deg, var(--blush) 0%, var(--primary) 100%);
+            color: white;
+        }
+        .motivo-9 {
+            background: linear-gradient(135deg, var(--mint) 0%, var(--secondary-dark) 100%);
+            color: white;
+        }
+        .motivo-10 {
+            background: linear-gradient(135deg, var(--rose) 0%, var(--terra) 100%);
+            color: white;
+        }
+
+        /* Decoraciones internas */
+        .motivo::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+
+        .motivo::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .motivo-3::after,
+        .motivo-7::after {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .motivo-3::before,
+        .motivo-7::before {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .motivo-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 1rem;
+        }
+
+        .motivo-numero {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 3rem;
+            font-style: italic;
+            line-height: 1;
+            opacity: 0.9;
+        }
+
+        .motivo-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .motivo-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .motivo-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .motivo-titulo {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .motivo-desc {
+            font-family: 'Lora', serif;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        .poster-footer {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding-top: 2rem;
+            border-top: 2px dashed rgba(212, 165, 165, 0.3);
+        }
+
+        .footer-decoracion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-decoracion .line {
+            width: 60px;
+            height: 1px;
+            background: var(--primary);
+            opacity: 0.5;
+        }
+
+        .footer-decoracion .heart {
+            font-size: 1.2rem;
+        }
+
+        .poster-footer-text {
+            font-family: 'Bodoni Moda', serif;
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .poster-footer-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--terra) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            box-shadow: 0 8px 20px rgba(212, 165, 165, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .poster-footer-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(212, 165, 165, 0.5);
+        }
+
+        .poster-marca {
+            margin-top: 1.5rem;
+            font-family: 'Bodoni Moda', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--green-sage);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Tip */
+        .tip-impressao {
+            max-width: 900px;
+            margin: 2rem auto 0;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--dark);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .tip-impressao strong {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .poster {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .poster-titulo {
+                font-size: 2.5rem;
+            }
+
+            .poster-titulo .numero {
+                font-size: 3.5rem;
+            }
+
+            .motivos-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .motivo {
+                min-height: 150px;
+            }
+
+            .motivo-numero {
+                font-size: 2.5rem;
+            }
+
+            .poster-footer-text {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="poster">
+            <!-- Header -->
+            <div class="poster-header">
+                <div class="poster-logo">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 20 30 L 100 30 L 100 90 Q 100 95 95 95 L 25 95 Q 20 95 20 90 Z" 
+                              fill="none" stroke="#d4a5a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 20 30 L 60 65 L 100 30" 
+                              fill="none" stroke="#d4a5a5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g transform="translate(60, 55)">
+                            <path d="M 0,-8 C -5,-13 -10,-13 -10,-8 C -10,-3 -5,2 0,8 C 5,2 10,-3 10,-8 C 10,-13 5,-13 0,-8 Z" 
+                                  fill="#d4a5a5"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="poster-tag">Manifesto</div>
+                <h1 class="poster-titulo">
+                    <span class="numero">10</span>motivos
+                </h1>
+                <p class="poster-subtitulo">por los que una mujer necesita escribir, conectar y dejar de cargar sola</p>
+            </div>
+
+            <!-- Grid de motivos -->
+            <div class="motivos-grid">
+                <!-- Motivo 1 -->
+                <div class="motivo motivo-1">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">01</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="25" cy="25" r="20" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+                                <path d="M 18 22 Q 25 18 32 22" stroke="white" stroke-width="2" fill="none" opacity="0.9"/>
+                                <line x1="20" y1="32" x2="30" y2="32" stroke="white" stroke-width="2.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">El silencio pesa</div>
+                        <div class="motivo-desc">Guardarse todo no es fortaleza. Es soledad disfrazada de paciencia.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 2 -->
+                <div class="motivo motivo-2">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">02</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 25 15 L 30 25 L 40 25 L 32 32 L 35 42 L 25 36 L 15 42 L 18 32 L 10 25 L 20 25 Z" 
+                                      fill="white" opacity="0.9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">Ser vulnerable es valiente</div>
+                        <div class="motivo-desc">No débil. Mostrar lo que sentimos es uno de los actos más valientes que existen.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 3 -->
+                <div class="motivo motivo-3">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">03</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="15" y1="38" x2="35" y2="18" stroke="#d4a5a5" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="36" cy="17" r="3" fill="#d4a5a5"/>
+                                <line x1="13" y1="35" x2="20" y2="35" stroke="#d4a5a5" stroke-width="2" opacity="0.6"/>
+                                <line x1="15" y1="40" x2="22" y2="40" stroke="#d4a5a5" stroke-width="2" opacity="0.6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">Escribir sana</div>
+                        <div class="motivo-desc">La palabra que sale del cuerpo deja de morder por dentro. Escribir libera.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 4 -->
+                <div class="motivo motivo-4">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">04</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 15 25 Q 15 20 20 18 Q 25 16 30 18 Q 35 20 35 25 Q 35 32 25 38 Q 22 35 18 32 Q 15 30 15 25 Z" 
+                                      fill="white" opacity="0.9"/>
+                                <circle cx="25" cy="25" r="3" fill="#d4a5a5" opacity="0.8"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">Mereces ser escuchada</div>
+                        <div class="motivo-desc">Sin consejos no pedidos. Sin "deberías". Solo ser oída de verdad.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 5 -->
+                <div class="motivo motivo-5">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">05</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="18" cy="20" r="6" fill="white" opacity="0.9"/>
+                                <circle cx="32" cy="20" r="6" fill="white" opacity="0.9"/>
+                                <path d="M 12 35 Q 18 28 25 30 Q 32 28 38 35" fill="none" stroke="white" stroke-width="2" opacity="0.9"/>
+                                <line x1="22" y1="22" x2="28" y2="22" stroke="white" stroke-width="2" opacity="0.6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">No estás sola</div>
+                        <div class="motivo-desc">Otras mujeres sienten lo mismo que tú. Y están esperando saberlo.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 6 -->
+                <div class="motivo motivo-6">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">06</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="13" y="10" width="24" height="30" rx="2" fill="white" opacity="0.9"/>
+                                <line x1="17" y1="18" x2="33" y2="18" stroke="#d4a5a5" stroke-width="1" opacity="0.5"/>
+                                <line x1="17" y1="23" x2="30" y2="23" stroke="#d4a5a5" stroke-width="1" opacity="0.5"/>
+                                <line x1="17" y1="28" x2="33" y2="28" stroke="#d4a5a5" stroke-width="1" opacity="0.5"/>
+                                <line x1="17" y1="33" x2="28" y2="33" stroke="#d4a5a5" stroke-width="1" opacity="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">Tu historia importa</div>
+                        <div class="motivo-desc">Tu vivencia puede ser el puente que otra mujer necesita para cruzar.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 7 -->
+                <div class="motivo motivo-7">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">07</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="12" width="20" height="30" rx="3" fill="none" stroke="#d4a5a5" stroke-width="2"/>
+                                <line x1="20" y1="20" x2="30" y2="20" stroke="#d4a5a5" stroke-width="2" opacity="0.6"/>
+                                <line x1="20" y1="25" x2="30" y2="25" stroke="#d4a5a5" stroke-width="2" opacity="0.6"/>
+                                <line x1="20" y1="30" x2="28" y2="30" stroke="#d4a5a5" stroke-width="2" opacity="0.6"/>
+                                <circle cx="25" cy="37" r="2" fill="#d4a5a5"/>
+                                <line x1="10" y1="42" x2="40" y2="10" stroke="#c89595" stroke-width="2.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">Las redes agotan</div>
+                        <div class="motivo-desc">Los likes vacíos no llenan. Lo que sana es la conversación lenta y profunda.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 8 -->
+                <div class="motivo motivo-8">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">08</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 25 12 C 22 10 17 12 17 17 C 17 23 25 30 25 30 C 25 30 33 23 33 17 C 33 12 28 10 25 12" 
+                                      fill="white" opacity="0.9"/>
+                                <path d="M 25 22 C 23 21 21 22 21 24 C 21 27 25 30 25 30 C 25 30 29 27 29 24 C 29 22 27 21 25 22" 
+                                      fill="#d4a5a5" opacity="0.7"/>
+                                <line x1="15" y1="38" x2="35" y2="38" stroke="white" stroke-width="2" opacity="0.6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">Entre nosotras nos entendemos</div>
+                        <div class="motivo-desc">Hay códigos y silencios que solo otra mujer puede comprender.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 9 -->
+                <div class="motivo motivo-9">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">09</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 12 25 L 25 12 L 38 25 L 38 40 L 12 40 Z" fill="white" opacity="0.9"/>
+                                <rect x="22" y="30" width="6" height="10" fill="#7da89e" opacity="0.7"/>
+                                <circle cx="25" cy="35" r="4" fill="none" stroke="#7da89e" stroke-width="1" opacity="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">Mereces un refugio</div>
+                        <div class="motivo-desc">Un espacio donde no te juzgan. Donde puedes ser real sin consecuencias.</div>
+                    </div>
+                </div>
+
+                <!-- Motivo 10 -->
+                <div class="motivo motivo-10">
+                    <div class="motivo-top">
+                        <div class="motivo-numero">10</div>
+                        <div class="motivo-icon">
+                            <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 25 40 L 25 20" stroke="white" stroke-width="2" opacity="0.9"/>
+                                <path d="M 25 28 Q 15 22 18 12 Q 25 18 25 28" fill="white" opacity="0.9"/>
+                                <path d="M 25 28 Q 35 22 32 12 Q 25 18 25 28" fill="white" opacity="0.9"/>
+                                <ellipse cx="25" cy="42" rx="10" ry="2" fill="white" opacity="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="motivo-content">
+                        <div class="motivo-titulo">La sororidad sana</div>
+                        <div class="motivo-desc">No es un cliché. Es la red invisible que sostiene a las mujeres valientes.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="poster-footer">
+                <div class="footer-decoracion">
+                    <div class="line"></div>
+                    <div class="heart">✦</div>
+                    <div class="line"></div>
+                </div>
+                <div class="poster-footer-text">
+                    Tu primera carta<br>te está esperando
+                </div>
+                <a href="#" class="poster-footer-cta">Únete a la comunidad →</a>
+                <div class="poster-marca">
+                    <span>✉️</span>
+                    <span>@cartasentrenosotras</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   </body>
+</html>
