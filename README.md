@@ -88,21 +88,8 @@ Nuestro público objetivo son mujeres de entre 20 y 40 años: sensibles, introsp
 
 Aplicamos esta herramienta de Design Thinking para explorar el proyecto desde múltiples perspectivas y tomar decisiones más completas y equilibradas.
 
-| Sombrero | Perspectiva | Aportación |
-|---|---|---|
-| 🎩 **Blanco** — Datos | Hechos objetivos | Mujeres emocionalmente aisladas pese a la hiperconexión. Crecimiento del journaling y comunidades íntimas online |
-| 🎩 **Rojo** — Emociones | Intuición y sentimientos | Sentimos que hay una necesidad real. El proyecto nos emociona porque lo vivimos nosotras mismas |
-| 🎩 **Negro** — Riesgos | Pensamiento crítico | Anonimato mal gestionado. Dificultad para escalar. Posible uso inadecuado del espacio |
-| 🎩 **Amarillo** — Valor | Optimismo y beneficios | Conexión auténtica. Comunidad segura. Diferencial claro frente a redes sociales tradicionales |
-| 🎩 **Verde** — Ideas | Creatividad | Matching emocional. Prompts semanales. Eventos presenciales de escritura. Dinámicas guiadas |
-| 🎩 **Azul** — Proceso | Organización | Estructura por etapas, empezando con MVP digital y comunidad piloto antes de escalar |
 
-<!-- Reemplaza el comentario con la imagen real cuando la tengas -->
-<!-- ![Metodología 6 Sombreros](6_sombreros.png) -->
-
-> 📌 *Inserta aquí la imagen con el resultado visual del ejercicio de los 6 Sombreros.*
-
----
+---![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/Hats.png)
 
 ## Etapa 2 — Prototipar / Productos
 
@@ -110,16 +97,11 @@ A continuación se presentan los productos desarrollados y la integración de lo
 
 ---
 
-### 🎨 Identidad visual — Moodboard
+### 🎨 Identidad visual
 
 Documento visual que recoge la paleta de colores, tipografías, texturas e inspiraciones estéticas de la marca. Refleja la calidez, intimidad y feminidad moderna de la comunidad.
 
-🔗 [Ver moodboard completo](moodboard_cartas_entre_nosotras.html) · ✅ **Completado**
-
-<!-- Reemplaza el comentario con una captura del moodboard si la tienes -->
-<!-- ![Moodboard](moodboard_preview.png) -->
-
-> 📌 *Inserta aquí una captura del moodboard o la imagen de identidad visual.*
+![](
 
 ---
 
@@ -127,7 +109,7 @@ Documento visual que recoge la paleta de colores, tipografías, texturas e inspi
 
 Diseño de piezas publicitarias y materiales de comunicación visual para la comunidad, desarrollados en Figma.
 
-🔗 [Ver diseños en Figma](#) *(próximamente)* · 🔄 **En proceso**
+PENDIENTE
 
 ---
 
@@ -135,9 +117,12 @@ Diseño de piezas publicitarias y materiales de comunicación visual para la com
 
 Banner o post con los 10 puntos del manifiesto de *Cartas entre Nosotras*: un texto que invite, conecte y refleje los valores de la comunidad. Será la pieza de presentación de la comunidad.
 
-🔗 [Ver manifiesto publicado](#) *(próximamente)* · ⏳ **Pendiente**
+PENDIENTE
 
----
+---//////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 ### 🌐 Comunidad digital — Elgg
 
@@ -176,21 +161,4 @@ Plataforma de comunidad privada donde las mujeres podrán conectarse, intercambi
 
 
 
-
-
-
-## Referencias y recursos
-
-* [Proceso UX](https://uxmastery.com/resources/process/)
-* [Diseño de Experiencias UX](http://www.nosolousabilidad.com/articulos/uxd.htm) 
-* [Métodos UX](https://mgea.github.io/UX-DIU-Checklist/index.html) 
-* [MuseMap: ejemplo de experiencia UX](https://blog.prototypr.io/musemap-street-art-app-ux-case-study-9bec6a99823b) 
-* (...) 
-* (Artículos ..  )
-* (Productos utilizados ) 
-* (Recursos tipo Imágenes, videos , etc.) 
-
-
-
-
-Granada, Junio 202X
+Granada, Mayo 2026
