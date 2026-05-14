@@ -8,7 +8,7 @@
 |---|---|
 | **Proyecto** | Comunidad emocional femenina |
 | **Autoras** | Sheyla · Mariana · Nisrin · Tayla |
-| **Fecha** | Mayo 2025 |
+| **Fecha** | Mayo 2026 |
 | **Slogan** | *Un refugio de escucha y conexión* |
 
 ---
@@ -89,21 +89,21 @@ Nuestro público objetivo son mujeres de entre 20 y 40 años: sensibles, introsp
 Aplicamos esta herramienta de Design Thinking para explorar el proyecto desde múltiples perspectivas y tomar decisiones más completas y equilibradas.
 
 
----![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/Hats.png)
+![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/Hats.png)
 
 ## Etapa 2 — Prototipar / Productos
 
 A continuación se presentan los productos desarrollados y la integración de los diferentes medios y plataformas que conforman la experiencia de *Cartas entre Nosotras*.
 
----
+
 
 ### 🎨 Identidad visual
 
 Documento visual que recoge la paleta de colores, tipografías, texturas e inspiraciones estéticas de la marca. Refleja la calidez, intimidad y feminidad moderna de la comunidad.
 
-![](
+![](https://github.com/SheylaBT/Cartas-entre-Nosotras/blob/main/Resumen%20de%20Prototipo.png)
 
----
+
 
 ### 📐 Publicidad y promoción — Figma
 
