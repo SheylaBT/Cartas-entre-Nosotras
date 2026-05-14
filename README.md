@@ -230,7 +230,6 @@ El proyecto ha cumplido sus objetivos principales:
 - Sin base de datos ni autenticación
 
 ### Sobre la idea
-- Falta definir el modelo de negocio (gratis o de pago)
 - No se ha validado con usuarias reales
 
 ### Planificación
